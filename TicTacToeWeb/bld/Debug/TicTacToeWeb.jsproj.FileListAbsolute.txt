@@ -1,0 +1,16 @@
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bin\Debug\ReverseMap\resources.pri
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bin\Debug\AppxManifest.xml
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bin\Debug\TicTacToeWeb.build.appxrecipe
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\ResourceHandlingTask.state
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\priconfig.xml
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\priconfig.xml.intermediate
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\layout.resfiles
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\layout.resfiles.intermediate
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\resources.resfiles
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\resources.resfiles.intermediate
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\pri.resfiles
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\pri.resfiles.intermediate
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\qualifiers.txt
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\qualifiers.txt.intermediate
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\ProjectArchitectures.txt

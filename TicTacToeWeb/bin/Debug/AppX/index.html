@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TicTacToeWeb</title>
+
+    
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="gamecontainer">
+        <table id="gametable">
+            <tr>
+                <td id="1" class="borderbottom quad"></td>
+                <td id="2" class="bordersidebottom quad"></td>
+                <td id="3" class="borderbottom quad"></td>
+            </tr>
+            <tr>
+                <td id="4" class="borderbottom quad"></td>
+                <td id="5" class="bordersidebottom quad"></td>
+                <td id="6" class="borderbottom quad quad"></td>
+            </tr>
+            <tr>
+                <td id="7" class="quad"></td>
+                <td id="8" class="bordersides quad"></td>
+                <td id="9" class="quad"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div id="computerscore" class="scoreboard"><h3>Computer</h3><h5 id="comwins">0</h5> <h5 id="comdraws">0</h5> <h5 id="comlosses">0</h5></div>
+    <div id="humanscore" class="scoreboard"><h3>Human</h3><h5 id="humwins">0</h5> <h5 id="humdraws">0</h5> <h5 id="humlosses">0</h5></div>
+
+    <h4 style="font-family: 'ruslan display'; color: #262228; font-size: 40px;float: right; display: inline-block; margin-top: 15%; margin-right: -19%; text-decoration: underline;">X's or O's</h4>
+
+    <div id="xbutton" class="button">X</div>
+    <div id="obutton" class="button">O</div>
+
+
+    <div id="reset" class="button">Reset</div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

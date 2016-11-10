@@ -1,0 +1,156 @@
+﻿body {
+  background-color: #4Abdac;
+}
+
+#gamecontainer {
+  background-color: black;
+  width: 330px;
+  height: 330px;
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 50px;
+}
+
+h5 {
+  display: inline-block;
+}
+
+table {
+  background-color: #fc4a1a;
+  display: inline-block;
+}
+
+#computerscore {
+  float: right;
+  clear: right;
+  margin-right: 20%;
+  background-color: #fc4a1a;
+  ;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  border-top: 5px solid #262228;
+  margin-top: 50px;
+}
+
+h2 {
+  float: right;
+  margin-right: ;
+  background-color: red;
+  display: inline-block;
+}
+
+#humanscore {
+  float: right;
+  clear: ;
+  background-color: #fc4a1a;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  border-top: 5px solid #262228;
+  border-right: 5px solid #262228;
+  margin-top: 50px;
+}
+
+tr {
+  height: 110px;
+}
+
+td {
+  min-width: 110px;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  font-family: 'Ruslan Display', cursive;
+}
+
+td:hover {
+  background-color: #e37222;
+}
+
+.borderbottom {
+  border-bottom: 5px solid #4Abdac;
+}
+
+.bordersidebottom {
+  border-bottom: 5px solid #4Abdac;
+  border-left: 5px solid #4Abdac;
+  border-right: 5px solid #4Abdac;
+}
+
+.bordersides {
+  border-left: 5px solid #4Abdac;
+  border-right: 5px solid #4Abdac;
+}
+
+.scoreboard {
+  min-width: 110px;
+  text-align: center;
+  color: white;
+  font-family: 'Ruslan Display', cursive;
+}
+
+#xbutton {
+  width: 100px;
+  height: 45px;
+  display: inline-block;
+  background-color: #fc4a1a;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 24.5%;
+  text-align: center;
+  border-radius: 10%;
+  color: white;
+  font-family: 'ruslan display', cursive;
+  font-size: 50px;
+  margin-top: 275px;
+}
+
+#obutton {
+  width: 100px;
+  height: 45px;
+  display: inline-block;
+  background-color: #fc4a1a;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 15.25%;
+  text-align: center;
+  border-radius: 10%;
+  color: white;
+  font-family: 'ruslan display', cursive;
+  font-size: 50px;
+  margin-top: 275px;
+}
+
+#xbutton:hover {
+  background-color: #e37222;
+}
+
+#obutton:hover {
+  background-color: #e37222;
+}
+
+#reset {
+  background-color: #fc4a1a;
+  color: white;
+  width: 200px;
+  height: 40px;
+  display: block;
+  margin-left: 25.8%;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'ruslan display', cursive;
+  font-size: 40px;
+}
+
+#reset:hover {
+  background-color: #e37222;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+.clickable {
+  pointer-events: auto;
+}
