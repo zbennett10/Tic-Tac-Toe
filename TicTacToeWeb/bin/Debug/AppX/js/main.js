@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     //------ this function makes quadrants clickable again
 
-    var allowClick = function () {
+     function allowClick() {
         q1.removeClass("unclickable");
         q2.removeClass("unclickable");
         q3.removeClass("unclickable");
@@ -47,181 +47,94 @@ $(document).ready(function () {
         q7.removeClass("unclickable");
         q8.removeClass("unclickable");
         q9.removeClass("unclickable");
-    }
+     }
+
+    //-------computer wins
+     function computerWins() {
+         comWins += 1;
+         comWscore.text(comWins);
+         humLosses += 1;
+         humLscore.text(humLosses);
+     }
+
+    //--------human wins
+     function humanWins() {
+         humWins = humWins + 1;
+         humWscore.text(humWins);
+         comLosses = comLosses + 1;
+         comLscore.text(comLosses);
+     }
+
+    //---------reinitalize values
+     function clearAndInitialize() {
+         quad.empty();
+         quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
+         humPicked = [];
+         comPicked = [];
+         allowClick();
+     }
 
     //-------- this function checks to see if a winning combination has occurred
 
     var winCheck = function () {
 
         if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q2") != -1 && comPicked.indexOf("q3") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q9") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q4") != -1 && comPicked.indexOf("q7") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q2") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q8") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q3") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q7") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q3") != -1 && comPicked.indexOf("q6") != -1 && comPicked.indexOf("q9") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q4") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q6") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         } else if (comPicked.indexOf("q7") != -1 && comPicked.indexOf("q8") != -1 && comPicked.indexOf("q9") != -1) {
-            comWins = comWins + 1;
-            comWscore.text(comWins);
-            humLosses = humLosses + 1;
-            humLscore.text(humLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            computerWins();
+            clearAndInitialize();
         }
         //-----------checks to see if hum won
         if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q9") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q4") != -1 && humPicked.indexOf("q7") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q2") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q8") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q7") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q6") != -1 && humPicked.indexOf("q9") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q4") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q6") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
 
         } else if (humPicked.indexOf("q7") != -1 && humPicked.indexOf("q8") != -1 && humPicked.indexOf("q9") != -1) {
-            humWins = humWins + 1;
-            humWscore.text(humWins);
-            comLosses = comLosses + 1;
-            comLscore.text(comLosses);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            humanWins();
+            clearAndInitialize();
         }
 
     }

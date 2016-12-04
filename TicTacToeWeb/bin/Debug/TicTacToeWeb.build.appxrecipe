@@ -10,82 +10,82 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d85a31a7-b81f-4148-85e2-6df2b561e5c2</PackageIdentityName>
     <PackageIdentityPublisher>CN=zbenn</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\bld\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\index.html">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\index.html">
       <PackagePath>index.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\js\main.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\js\main.js">
       <PackagePath>js\main.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.intellisense.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.intellisense.js">
       <PackagePath>Scripts\jquery-3.1.1.intellisense.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.js">
       <PackagePath>Scripts\jquery-3.1.1.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.min.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.min.js">
       <PackagePath>Scripts\jquery-3.1.1.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.slim.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.slim.js">
       <PackagePath>Scripts\jquery-3.1.1.slim.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.slim.min.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.slim.min.js">
       <PackagePath>Scripts\jquery-3.1.1.slim.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\_references.js">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\_references.js">
       <PackagePath>Scripts\_references.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\css\default.css">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\packages.config">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\packages.config">
       <PackagePath>packages.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.min.map">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.min.map">
       <PackagePath>Scripts\jquery-3.1.1.min.map</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\Scripts\jquery-3.1.1.slim.min.map">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\Scripts\jquery-3.1.1.slim.min.map">
       <PackagePath>Scripts\jquery-3.1.1.slim.min.map</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\TicTacToeWeb\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\zbenn\Documents\Visual Studio 2015\Projects\TicTacToeWeb\Tic-Tac-Toe\TicTacToeWeb\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
