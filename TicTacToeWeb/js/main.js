@@ -101,7 +101,7 @@ $(document).ready(function () {
              var foundAll = [];
              for (var prop in winCombos) {
            
-                 for (var i = 0; i < prop.length; i++) {
+                 for (var i = 0; i < winCombos[prop].length; i++) {
                      if (picks.indexOf(winCombos[prop][i]) === -1) {
                          foundAll = [];
                          break;

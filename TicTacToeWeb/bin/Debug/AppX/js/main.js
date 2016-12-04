@@ -101,7 +101,7 @@ $(document).ready(function () {
              var foundAll = [];
              for (var prop in winCombos) {
            
-                 for (var i = 0; i < prop.length; i++) {
+                 for (var i = 0; i < winCombos[prop].length; i++) {
                      if (picks.indexOf(winCombos[prop][i]) === -1) {
                          foundAll = [];
                          break;
@@ -127,41 +127,6 @@ $(document).ready(function () {
      var winCheck = function () {
          winChecker(comPicked, "com");
          winChecker(humPicked, "hum");
-
-        //-----------checks to see if hum won
-        //if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q9") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q4") != -1 && humPicked.indexOf("q7") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q2") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q8") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q7") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q6") != -1 && humPicked.indexOf("q9") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q4") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q6") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-
-        //} else if (humPicked.indexOf("q7") != -1 && humPicked.indexOf("q8") != -1 && humPicked.indexOf("q9") != -1) {
-        //    humanWins();
-        //    clearAndInitialize();
-        //}
-
     }
     
 
