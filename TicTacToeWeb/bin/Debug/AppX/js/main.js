@@ -65,6 +65,15 @@ $(document).ready(function () {
          comLscore.text(comLosses);
      }
 
+    //-------a draw happens
+
+     function playersDraw() {
+         comDraws += 1;
+         comDscore.text(comDraws);
+         humDraws += 1;
+         humDscore.text(humDraws);
+     }
+
     //---------reinitalize values
      function clearAndInitialize() {
          quad.empty();
@@ -74,160 +83,119 @@ $(document).ready(function () {
          allowClick();
      }
 
+    //---------
+     var winCombos = {
+         "comboOne": ["q1", "q2", "q3"],
+         "comboTwo": ["q1", "q5", "q9"],
+         "comboThree": ["q1", "q4", "q7"],
+         "comboFour": ["q2", "q5", "q8"],
+         "comboFive": ["q3", "q5", "q7"],
+         "comboSix": ["q3", "q6", "q9"],
+         "comboSeven": ["q4", "q5", "q6"],
+         "comboEight": ["q7", "q8", "q9"]
+     };
+
+    //--------checks to see if computer has won
+    // this function takes an array of picks and a string description of the player ("hum" or "com")
+     function winChecker(picks, desc) {
+             var foundAll = [];
+             for (var prop in winCombos) {
+           
+                 for (var i = 0; i < prop.length; i++) {
+                     if (picks.indexOf(winCombos[prop][i]) === -1) {
+                         foundAll = [];
+                         break;
+                     }
+                     else {
+                         foundAll.push(winCombos[prop][i]);
+                         if (foundAll.length === 3) {
+                             if (desc === "com") computerWins();
+                             if (desc === "hum") humanWins();
+                             clearAndInitialize();
+                         }
+                         else continue;
+                     }
+                 }
+             }
+     }
+
+     
+
+
     //-------- this function checks to see if a winning combination has occurred
 
-    var winCheck = function () {
+     var winCheck = function () {
+         winChecker(comPicked, "com");
+         winChecker(humPicked, "hum");
 
-        if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q2") != -1 && comPicked.indexOf("q3") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q9") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q1") != -1 && comPicked.indexOf("q4") != -1 && comPicked.indexOf("q7") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q2") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q8") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q3") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q7") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q3") != -1 && comPicked.indexOf("q6") != -1 && comPicked.indexOf("q9") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q4") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q6") != -1) {
-            computerWins();
-            clearAndInitialize();
-        } else if (comPicked.indexOf("q7") != -1 && comPicked.indexOf("q8") != -1 && comPicked.indexOf("q9") != -1) {
-            computerWins();
-            clearAndInitialize();
-        }
         //-----------checks to see if hum won
-        if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q9") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q9") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q4") != -1 && humPicked.indexOf("q7") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q4") != -1 && humPicked.indexOf("q7") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q2") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q8") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q2") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q8") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q7") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q7") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q6") != -1 && humPicked.indexOf("q9") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q6") != -1 && humPicked.indexOf("q9") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q4") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q6") != -1) {
-            humanWins();
-            clearAndInitialize();
+        //} else if (humPicked.indexOf("q4") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q6") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
 
-        } else if (humPicked.indexOf("q7") != -1 && humPicked.indexOf("q8") != -1 && humPicked.indexOf("q9") != -1) {
-            humanWins();
-            clearAndInitialize();
-        }
+        //} else if (humPicked.indexOf("q7") != -1 && humPicked.indexOf("q8") != -1 && humPicked.indexOf("q9") != -1) {
+        //    humanWins();
+        //    clearAndInitialize();
+        //}
 
     }
-    //-------end of winCheck function
+    
 
     var drawCheck = function () {
 
 
         if ((comPicked.indexOf("q1") != -1 && comPicked.indexOf("q2") != -1 && comPicked.indexOf("q3") != -1) != true && (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q1") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q9") != -1) != true && (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q9") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q1") != -1 && comPicked.indexOf("q4") != -1 && comPicked.indexOf("q7") != -1) != true && (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q4") != -1 && humPicked.indexOf("q7") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q2") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q8") != -1) != true && (humPicked.indexOf("q2") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q8") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDscore = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q3") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q7") != -1) != true && (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q7") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q3") != -1 && comPicked.indexOf("q6") != -1 && comPicked.indexOf("q9") != -1) != true && (humPicked.indexOf("q3") != -1 && humPicked.indexOf("q6") != -1 && humPicked.indexOf("q9") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q4") != -1 && comPicked.indexOf("q5") != -1 && comPicked.indexOf("q6") != -1) != true && (humPicked.indexOf("q4") != -1 && humPicked.indexOf("q5") != -1 && humPicked.indexOf("q6") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         } else if ((comPicked.indexOf("q7") != -1 && comPicked.indexOf("q8") != -1 && comPicked.indexOf("q9") != -1) != true && (humPicked.indexOf("q7") != -1 && humPicked.indexOf("q8") != -1 && humPicked.indexOf("q9") != -1) != true) {
-            comDraws = comDraws + 1;
-            comDscore.text(comDraws);
-            humDraws = humDraws + 1;
-            humDscore.text(humDraws);
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            playersDraw();
+            clearAndInitialize();
         }
 
     }
 
-    //end of drawCheck function--------------
 
     //when human status is true and clicks on xbutton, x is assigned to human and o is assigned to computer
     //when computer status is true same thing ^^
@@ -289,20 +257,13 @@ $(document).ready(function () {
             }
 
             drawCheck();
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
+            clearAndInitialize();
 
             //----------- end of first if 
 
         } else if (quadArr.length < 1) {
             drawCheck();
-            quad.empty();
-            quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
-            humPicked = [];
-            comPicked = [];
-            allowClick();
+            clearAndInitialize();
         }
         //----------------end of quad.arr.length of zero check
 
