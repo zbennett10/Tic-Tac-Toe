@@ -2,6 +2,8 @@
 /// <reference path="../Scripts/jquery-3.1.1.min.js" />
 
 $(document).ready(function () {
+    
+    //globals ------------------------------------------------------
     var humxo;
     var comxo;
     var q1 = $("#1");
@@ -34,8 +36,10 @@ $(document).ready(function () {
     var humStatus = true;
     var comStatus = false;
     var comChoose;
+    
+    //helper functions -------------------------------------------------------------
 
-    //------ this function makes quadrants clickable again
+    //this function makes quadrants clickable again
 
      function allowClick() {
         q1.removeClass("unclickable");
@@ -49,7 +53,7 @@ $(document).ready(function () {
         q9.removeClass("unclickable");
      }
 
-    //-------computer wins
+    //computer wins
      function computerWins() {
          comWins += 1;
          comWscore.text(comWins);
@@ -57,7 +61,7 @@ $(document).ready(function () {
          humLscore.text(humLosses);
      }
 
-    //--------human wins
+    //human wins
      function humanWins() {
          humWins = humWins + 1;
          humWscore.text(humWins);
@@ -65,7 +69,7 @@ $(document).ready(function () {
          comLscore.text(comLosses);
      }
 
-    //-------a draw happens
+    //a draw happens
 
      function playersDraw() {
          comDraws += 1;
@@ -74,7 +78,7 @@ $(document).ready(function () {
          humDscore.text(humDraws);
      }
 
-    //---------reinitalize values
+    //reinitalize values
      function clearAndInitialize() {
          quad.empty();
          quadArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
@@ -83,7 +87,7 @@ $(document).ready(function () {
          allowClick();
      }
 
-    //---------
+    //winning combo object
      var winCombos = {
          "comboOne": ["q1", "q2", "q3"],
          "comboTwo": ["q1", "q5", "q9"],
@@ -95,7 +99,7 @@ $(document).ready(function () {
          "comboEight": ["q7", "q8", "q9"]
      };
 
-    //--------checks to see if computer has won
+    //checks to see if computer has won
     // this function takes an array of picks and a string description of the player ("hum" or "com")
      function winChecker(picks, desc) {
              var foundAll = [];
@@ -122,17 +126,15 @@ $(document).ready(function () {
      
 
 
-    //-------- this function checks to see if a winning combination has occurred
+    //this function checks to see if a winning combination has occurred
 
      var winCheck = function () {
          winChecker(comPicked, "com");
          winChecker(humPicked, "hum");
     }
     
-
+    //this function checks for a draw
     var drawCheck = function () {
-
-
         if ((comPicked.indexOf("q1") != -1 && comPicked.indexOf("q2") != -1 && comPicked.indexOf("q3") != -1) != true && (humPicked.indexOf("q1") != -1 && humPicked.indexOf("q2") != -1 && humPicked.indexOf("q3") != -1) != true) {
             playersDraw();
             clearAndInitialize();
@@ -161,33 +163,7 @@ $(document).ready(function () {
 
     }
 
-
-    //when human status is true and clicks on xbutton, x is assigned to human and o is assigned to computer
-    //when computer status is true same thing ^^
-    xbutton.click(function () {
-        if (humStatus === true) {
-            humxo = "X"; //if its the human's turn, they have X
-            comxo = "O";
-        }
-
-        if (comStatus === true) {
-            humxo = "O"; // if its the computer's turn, human has O
-            comxo = "X";
-        }
-    });
-
-    obutton.click(function () {
-        if (humStatus === true) {
-            humxo = "O";
-            comxo = "X";
-        }
-
-        if (comStatus === true) {
-            comxo = "O";
-            humxo = "X";
-        }
-    });
-    //---------------------------------------
+    //computer choice
     comChoose = function () {
 
         winCheck();
@@ -265,8 +241,36 @@ $(document).ready(function () {
         winCheck();
     }
 
-    //------------------------- human stuff
+    
+    //user induced event handlers ------------------------------------------------------
 
+    //when human status is true and clicks on xbutton, x is assigned to human and o is assigned to computer
+    //when computer status is true same thing ^^
+    xbutton.click(function () {
+        if (humStatus === true) {
+            humxo = "X"; //if its the human's turn, they have X
+            comxo = "O";
+        }
+
+        if (comStatus === true) {
+            humxo = "O"; // if its the computer's turn, human has O
+            comxo = "X";
+        }
+    });
+
+    obutton.click(function () {
+        if (humStatus === true) {
+            humxo = "O";
+            comxo = "X";
+        }
+
+        if (comStatus === true) {
+            comxo = "O";
+            humxo = "X";
+        }
+    });
+
+    //-------------quadrant click events
     q1.click(function () {
         humPicked.push("q1");
         var randIndex = quadArr.indexOf(q1);
